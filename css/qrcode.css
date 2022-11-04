@@ -1,0 +1,83 @@
+@media screen and (max-width: 345px) {
+  .qrCode-container {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.qrCode-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.qrCode-card {
+  max-width: 250px;
+  padding: 15px 15px 25px;
+  border-radius: 10px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.qrCode-card:hover {
+    cursor: pointer;
+  transform: translateY(-5px) scale(1.005);
+  box-shadow: 0 24px 36px var(--grayish-blue), 0 24px 46px var(--dark-blue);
+}
+.qrCode-card:hover .overlay {
+  opacity: .3;
+  transform: scale(20) translateZ(0);
+  background-color: var(--grayish-blue);
+
+}
+.qrCode-card:hover .qrCode-image,
+.qrCode-card:hover .qrCode-content__title,
+.qrCode-card:hover .qrCode-content__text{
+    position: relative;
+    color: var(--dark-blue);
+}
+
+
+.qrCode-image {
+  border-radius: inherit;
+}
+
+.qrCode-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.qrCode-content__title {
+  font-size: var(--font-paragraph);
+  font-weight: 700;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+.qrCode-content__text {
+  font-size: var(--font-paragraph);
+  text-align: center;
+  color: var(--grayish-blue);
+}
+
+.overlay {
+  border-radius: 50%;
+  position: absolute;
+  max-width: 250px;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  z-index: 0;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  transition: transform 1.5s ease-out;
+}
