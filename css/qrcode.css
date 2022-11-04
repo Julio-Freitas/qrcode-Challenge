@@ -1,18 +1,18 @@
 @media screen and (max-width: 345px) {
-  .qrCode-container {
+  .qr-code-container {
     margin-right: 10px;
     margin-left: 10px;
   }
 }
 
-.qrCode-container {
+.qr-code-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.qrCode-card {
+.qr-code-card {
   max-width: 250px;
   padding: 15px 15px 25px;
   border-radius: 10px;
@@ -25,30 +25,30 @@
   overflow: hidden;
 }
 
-.qrCode-card:hover {
+.qr-code-card:hover {
     cursor: pointer;
   transform: translateY(-5px) scale(1.005);
   box-shadow: 0 24px 36px var(--grayish-blue), 0 24px 46px var(--dark-blue);
 }
-.qrCode-card:hover .overlay {
+.qr-code-card:hover .overlay {
   opacity: .3;
   transform: scale(20) translateZ(0);
   background-color: var(--grayish-blue);
 
 }
-.qrCode-card:hover .qrCode-image,
-.qrCode-card:hover .qrCode-content__title,
-.qrCode-card:hover .qrCode-content__text{
+.qr-code-card:hover .qr-code-image,
+.qr-code-card:hover .qr-code-content__title,
+.qr-code-card:hover .qr-code-content__text{
     position: relative;
     color: var(--dark-blue);
 }
 
 
-.qrCode-image {
+.qr-code-image {
   border-radius: inherit;
 }
 
-.qrCode-content {
+.qr-code-content {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -56,14 +56,14 @@
   align-items: center;
   position: relative;
 }
-.qrCode-content__title {
+.qr-code-content__title {
   font-size: var(--font-paragraph);
   font-weight: 700;
   text-align: center;
   color: var(--dark-blue);
 }
 
-.qrCode-content__text {
+.qr-code-content__text {
   font-size: var(--font-paragraph);
   text-align: center;
   color: var(--grayish-blue);
